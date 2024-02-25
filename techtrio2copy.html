@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week Finder</title>
+    <style>
+        body {
+            background-image:
+            url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg') ;
+        background-size: cover;
+        text-align: center;
+        padding-top: 50px;
+        color:beige;
+    }
+    #result {
+        font-weight: bold;
+        margin-top: 20px;
+        color:beige;
+    }
+    </style>
+    <script>
+        function findDayOfWeek()
+        {
+            var dateInput = document.getElementById("dateInput").value;
+            var date = new Date(dateInput);
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var dayOfWeek = days[date.getDay()];
+            document.getElementById("result").innerHTML = "The day of the week for " + dateInput + " is " + dayOfWeek;
+        }
+    </script> 
+</head>
+<body style="text-align:center;">
+    
+    <h2>Day of the Week Finder</h2>
+    <p>Enter a date (YYYY-MM-DD): <input type="text" id="dateInput"></p>
+    <button onclick="findDayOfWeek()">Find Day of the Week</button>
+    <p id="result"></p>
+</body>
+
+</html>
